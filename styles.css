@@ -22,7 +22,7 @@ body {
     background: #1f2937;
     width: 100%;
     max-width: 420px;
-    min-height: 570px;
+    height: 650px;
     padding: 35px;
     border-radius: 16px;
     border: 1px solid #374151;
@@ -50,13 +50,13 @@ p {
     text-align: center;
 }
 
-
 /* Playing card */
 .card {
     position: relative;
     background: white;
     width: 150px;
     height: 210px;
+    flex-shrink: 0;
     border-radius: 12px;
     border: 1px solid #d1d5db;
 
@@ -103,13 +103,15 @@ p {
 .black {
     color: #111827;
 }
-/* Buttons */
+
+/* Buttons container */
 .buttons {
     display: flex;
     gap: 12px;
     width: 100%;
 }
 
+/* General button styling */
 button {
     flex: 1;
     padding: 14px;
@@ -122,6 +124,7 @@ button {
     transition: 0.2s;
 }
 
+/* Higher button */
 #higher {
     background: #2563eb;
 }
@@ -130,6 +133,7 @@ button {
     background: #1d4ed8;
 }
 
+/* Lower button */
 #lower {
     background: #dc2626;
 }
@@ -138,10 +142,12 @@ button {
     background: #b91c1c;
 }
 
+/* Button hover effects */
 button:hover {
     transform: translateY(-2px);
 }
 
+/* Disabled buttons */
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -154,6 +160,10 @@ button:disabled {
     font-size: 18px;
     font-weight: 600;
     min-height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Score */
@@ -162,11 +172,12 @@ button:disabled {
     font-weight: bold;
 }
 
-/* Play again */
+/* Play Again button */
 #playAgain {
     background: #10b981;
     width: 100%;
     display: none;
+    flex-shrink: 0;
 }
 
 #playAgain:hover {
