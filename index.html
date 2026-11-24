@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher or Lower</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <h1>Higher or Lower?</h1>
+
+        <p>Will the next card be higher or lower?</p>
+
+        <div class="card" id="card">
+            <span id="card-suit">♥</span>
+            <span id="card-rank">7</span>
+        </div>
+
+        <div class="buttons">
+            <button id="higher" onclick="makeGuess('higher')">
+                Higher ↑
+            </button>
+
+            <button id="lower" onclick="makeGuess('lower')">
+                Lower ↓
+            </button>
+        </div>
+
+        <p id="message">Good luck!</p>
+
+        <p id="score">Cards flipped: 1</p>
+
+        <button id="playAgain" onclick="startGame()">
+            Play Again
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
