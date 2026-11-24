@@ -15,10 +15,23 @@
 
         <p>Will the next card be higher or lower?</p>
 
-        <div class="card" id="card">
-            <span id="card-suit">♥</span>
-            <span id="card-rank">7</span>
+
+    <div class="card" id="card">
+    
+        <div class="top-corner">
+            <span id="top-rank">7</span>
+            <span id="top-suit">♥</span>
         </div>
+    
+        <span id="card-suit">♥</span>
+    
+        <div class="bottom-corner">
+            <span id="bottom-rank">7</span>
+            <span id="bottom-suit">♥</span>
+        </div>
+    
+    </div>
+
 
         <div class="buttons">
             <button id="higher" onclick="makeGuess('higher')">
