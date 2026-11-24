@@ -53,17 +53,23 @@ function createDeck() {
 }
 
 
-// Display a card on the screen
 function displayCard(card) {
 
     let cardSuit = document.getElementById("card-suit");
-    let cardRank = document.getElementById("card-rank");
     let cardElement = document.getElementById("card");
 
-    cardSuit.textContent = card.suit;
-    cardRank.textContent = card.name;
+    // Update the top-left corner
+    document.getElementById("top-rank").textContent = card.name;
+    document.getElementById("top-suit").textContent = card.suit;
 
-    // Red suits: hearts and diamonds
+    // Update the bottom-right corner
+    document.getElementById("bottom-rank").textContent = card.name;
+    document.getElementById("bottom-suit").textContent = card.suit;
+
+    // Update the central suit
+    cardSuit.textContent = card.suit;
+
+    // Set the card colour
     if (card.suit === "♥" || card.suit === "♦") {
         cardElement.className = "card red";
     }
@@ -72,6 +78,7 @@ function displayCard(card) {
     }
 
 }
+
 
 
 // Start or restart the game
